@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 100px;
+}
+
+.color-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #0f2027);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  z-index: -2;
+  opacity: 0.4;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#bubbleCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.typing-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #fff;
+  width: 0;
+  animation: typing 4s steps(30, end) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #aaa;
+  margin-top: 10px;
+}
+
+nav {
+  margin-top: 1.5rem;
+}
+
+nav a {
+  color: #00ffff;
+  margin: 0 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+section {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00ffff;
+}
+
+ul {
+  list-style-type: square;
+  margin-left: 1.5rem;
+  line-height: 1.6;
+}
+
+a {
+  color: #00ffff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.neon-button {
+  display: inline-block;
+  margin: 0.5rem 1rem;
+  padding: 10px 20px;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  background: transparent;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff inset;
+  transition: all 0.3s ease;
+}
+
+.neon-button:hover {
+  background: #00ffff;
+  color: #000;
+  box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff inset;
+}
